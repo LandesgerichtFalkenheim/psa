@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Landesgericht – Amtliche Ankündigungen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body class="bg-gericht">
+<header class="top-header">
+    <div class="logo-title">
+        <img src="Landesgericht_adler" alt="Logo Landesgericht" class="logo">
+        <div>
+            <h1>Landesgericht</h1>
+            <p>Amtliche Mitteilungen und Gesetzesänderungen</p>
+        </div>
+    </div>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-link active">Amtliche Ankündigungen</a>
+        <a href="gesetzesänderungen.html" class="nav-link">Gesetzesänderungen</a>
+        <a href="login.html" class="nav-link nav-right">Mitarbeiterbereich</a>
+    </nav>
+</header>
+
+<section class="banner">
+    <img src="Amtlicheankündigung.png" alt="Amtliche Ankündigungen Banner">
+</section>
+
+<main class="content">
+    <h2>Amtliche Ankündigungen</h2>
+    <p class="intro-text">
+        Auf dieser Seite veröffentlicht das Landesgericht amtliche Ankündigungen nach Kategorien Rot, Gelb und Grün.
+    </p>
+
+    <div class="filter-bar">
+        <button class="btn filter-btn" data-filter="alle">Alle</button>
+        <button class="btn filter-btn" data-filter="Rot">Rot</button>
+        <button class="btn filter-btn" data-filter="Gelb">Gelb</button>
+        <button class="btn filter-btn" data-filter="Grün">Grün</button>
+    </div>
+
+    <div id="ankuendigungenListe" class="card-grid">
+        <!-- Dynamisch per JS -->
+    </div>
+</main>
+
+<footer class="footer">
+    <p>Landesgericht – Offizielles Portal für amtliche Mitteilungen</p>
+</footer>
+</body>
+</html>
