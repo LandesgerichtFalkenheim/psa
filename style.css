@@ -1,395 +1,198 @@
 :root {
-    --blau: #0b3c6d;
-    --blau-hell: #1f5c9a;
-    --gold: #c9a23f;
-    --gold-hell: #e2c76a;
-    --grau-hell: #f5f7fa;
-    --text: #1b1b1b;
+    --blau: #0a2f57;
+    --blau-hell: #134a82;
+    --gold: #d4b253;
+    --gold-dunkel: #b9973c;
     --weiß: #ffffff;
-    --rot: #b3261e;
-    --gelb: #e6b800;
-    --gruen: #1f7a3a;
-    --shadow-soft: 0 2px 8px rgba(0,0,0,0.08);
-    --radius: 6px;
-    --transition: 0.2s ease;
-    --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --grau: #f4f6f9;
+    --text: #1a1a1a;
+
+    --radius: 8px;
+    --shadow: 0 2px 10px rgba(0,0,0,0.08);
+    --font: "Segoe UI", system-ui, sans-serif;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* Grundlayout */
 body {
-    font-family: var(--font-main);
+    margin: 0;
+    font-family: var(--font);
+    background: var(--grau);
     color: var(--text);
-    background-color: var(--grau-hell);
 }
 
-/* Hintergrundbild */
+/* Hintergrundbild dezent */
 .bg-gericht {
     background-image: url("../Banner_landesgericht.png");
     background-size: cover;
-    background-attachment: fixed;
     background-position: center;
+    background-attachment: fixed;
 }
 
-/* Overlay für Lesbarkeit */
 .bg-gericht::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.92);
     z-index: -1;
 }
 
 /* Header */
-
 .top-header {
-    background: linear-gradient(90deg, var(--blau), var(--blau-hell));
+    background: var(--blau);
     color: var(--weiß);
-    padding: 12px 40px;
+    padding: 14px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: var(--shadow-soft);
-}
-
-.logo-title {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    box-shadow: var(--shadow);
 }
 
 .logo {
-    height: 52px;
+    height: 42px;
     width: auto;
 }
 
 .logo-title h1 {
+    margin: 0;
     font-size: 1.4rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    letter-spacing: 0.03em;
 }
 
 .logo-title p {
+    margin: 0;
+    opacity: 0.85;
     font-size: 0.85rem;
-    opacity: 0.9;
 }
 
 /* Navigation */
-
 .main-nav {
     display: flex;
-    align-items: center;
-    gap: 16px;
+    gap: 14px;
 }
 
 .nav-link {
     color: var(--weiß);
     text-decoration: none;
-    font-size: 0.95rem;
-    padding: 6px 12px;
+    padding: 6px 14px;
     border-radius: 999px;
-    border: 1px solid transparent;
-    transition: var(--transition);
+    transition: 0.2s;
 }
 
 .nav-link:hover {
-    background-color: rgba(255,255,255,0.12);
-    border-color: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.15);
 }
 
 .nav-link.active {
-    background-color: var(--gold);
+    background: var(--gold);
     color: var(--blau);
     font-weight: 600;
 }
 
-.nav-right {
-    margin-left: 12px;
-}
-
-/* Banner */
-
-.banner {
-    width: 100%;
-    background-color: var(--weiß);
-    border-bottom: 3px solid var(--gold);
-    box-shadow: var(--shadow-soft);
-}
-
+/* Banner – jetzt deutlich kleiner */
 .banner img {
-    display: block;
     width: 100%;
-    max-height: 220px;
+    max-height: 120px;
     object-fit: cover;
+    border-bottom: 4px solid var(--gold);
+    box-shadow: var(--shadow);
 }
 
-/* Layout */
-
+/* Hauptbereich */
 .content {
     max-width: 1100px;
-    margin: 24px auto 40px;
-    padding: 0 16px 24px;
-}
-
-.content.narrow {
-    max-width: 520px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
 h2 {
-    font-size: 1.6rem;
     color: var(--blau);
-    margin-bottom: 8px;
-}
-
-h3 {
-    font-size: 1.2rem;
-    color: var(--blau);
+    font-size: 1.8rem;
     margin-bottom: 10px;
 }
 
-.intro-text {
-    margin-bottom: 18px;
-    color: #444;
-}
-
-/* Karten & Grid */
-
+/* Karten */
 .card {
-    background-color: var(--weiß);
+    background: var(--weiß);
+    padding: 20px;
     border-radius: var(--radius);
-    box-shadow: var(--shadow-soft);
-    padding: 18px 20px;
-    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--gold);
 }
 
-.form-card {
-    margin-bottom: 24px;
-}
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
-}
-
-/* Buttons */
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 16px;
-    border-radius: 999px;
-    border: 1px solid var(--blau);
-    background-color: var(--weiß);
-    color: var(--blau);
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.btn:hover {
-    background-color: var(--blau);
-    color: var(--weiß);
-}
-
-.primary-btn {
-    background-color: var(--blau);
-    color: var(--weiß);
-    border-color: var(--blau);
-}
-
-.primary-btn:hover {
-    background-color: var(--blau-hell);
-}
-
-.small-btn {
-    padding: 4px 10px;
-    font-size: 0.8rem;
-    background-color: transparent;
-    color: var(--weiß);
-    border-color: rgba(255,255,255,0.7);
-}
-
-.small-btn:hover {
-    background-color: rgba(255,255,255,0.15);
-}
-
-/* Filter */
-
-.filter-bar {
-    margin-bottom: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-/* Formulare */
-
-.form-group {
-    margin-bottom: 12px;
-}
-
-label {
-    display: block;
-    font-size: 0.9rem;
-    margin-bottom: 4px;
-    color: #333;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="url"],
-input[type="date"],
-textarea,
-select {
-    width: 100%;
-    padding: 7px 9px;
-    border-radius: 4px;
-    border: 1px solid #cfd3da;
-    font-size: 0.9rem;
-    font-family: var(--font-main);
-    transition: var(--transition);
-    background-color: #fbfcfe;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-    outline: none;
-    border-color: var(--blau);
-    box-shadow: 0 0 0 2px rgba(11,60,109,0.15);
-    background-color: #ffffff;
-}
-
-textarea {
-    resize: vertical;
-}
-
-/* Radio */
-
-.radio-group {
-    display: flex;
-    gap: 16px;
-    font-size: 0.9rem;
-}
-
-/* Gesetzes-Formulare */
-
-.gesetz-form.hidden {
-    display: none;
-}
-
-/* Status-Texte */
-
-.error-text {
-    color: var(--rot);
-    font-size: 0.85rem;
-    margin-top: 6px;
-}
-
-.success-text {
-    color: var(--gruen);
-    font-size: 0.85rem;
-    margin-top: 6px;
-}
-
-.hint-text {
-    font-size: 0.8rem;
-    color: #555;
-    margin-top: 8px;
-}
-
-/* Ankündigungs-Karten */
-
+/* Ankündigungen */
 .ank-card {
-    border-left: 4px solid var(--blau);
-    position: relative;
+    border-left-width: 6px;
 }
 
 .ank-kategorie {
     position: absolute;
     top: 12px;
     right: 16px;
-    font-size: 0.75rem;
-    padding: 3px 8px;
+    padding: 4px 10px;
     border-radius: 999px;
+    font-size: 0.75rem;
     color: var(--weiß);
     font-weight: 600;
 }
 
-.ank-kategorie.rot {
-    background-color: var(--rot);
-}
+.ank-kategorie.rot { background: #b3261e; }
+.ank-kategorie.gelb { background: #e6b800; color: #333; }
+.ank-kategorie.gruen { background: #1f7a3a; }
 
-.ank-kategorie.gelb {
-    background-color: var(--gelb);
-    color: #333;
-}
-
-.ank-kategorie.gruen {
-    background-color: var(--gruen);
-}
-
-.ank-card h4 {
-    margin-bottom: 6px;
-    color: var(--blau);
-}
-
-.ank-card p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-}
-
-/* Gesetzes-Karten */
-
+/* Gesetzeskarten */
 .gesetz-card {
-    border-top: 3px solid var(--gold);
+    border-left: 5px solid var(--gold);
 }
 
-.gesetz-meta {
-    font-size: 0.8rem;
-    color: #555;
-    margin-bottom: 6px;
+/* Buttons */
+.btn {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--blau);
+    background: var(--weiß);
+    color: var(--blau);
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-.gesetz-type {
-    font-weight: 600;
-    color: var(--gold);
+.btn:hover {
+    background: var(--blau);
+    color: var(--weiß);
+}
+
+.primary-btn {
+    background: var(--blau);
+    color: var(--weiß);
+}
+
+.primary-btn:hover {
+    background: var(--blau-hell);
+}
+
+/* Formulare */
+.form-card {
+    margin-bottom: 30px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    border-radius: var(--radius);
+    border: 1px solid #cfd3da;
+    background: #fafbfc;
+    transition: 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--blau);
+    box-shadow: 0 0 0 2px rgba(10,47,87,0.2);
 }
 
 /* Footer */
-
 .footer {
     text-align: center;
-    padding: 14px 10px;
-    font-size: 0.8rem;
-    color: #555;
-    background-color: rgba(255,255,255,0.9);
-    border-top: 1px solid rgba(0,0,0,0.05);
-}
-
-/* Responsiv */
-
-@media (max-width: 720px) {
-    .top-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        padding: 10px 16px;
-    }
-
-    .main-nav {
-        width: 100%;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-    }
-
-    .nav-right {
-        margin-left: 0;
-    }
+    padding: 16px;
+    background: var(--weiß);
+    border-top: 2px solid var(--gold);
+    margin-top: 40px;
 }
