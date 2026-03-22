@@ -18,30 +18,32 @@
     <nav class="main-nav">
         <a href="index.html" class="nav-link active">Amtliche Ankündigungen</a>
         <a href="gesetzesänderungen.html" class="nav-link">Gesetzesänderungen</a>
-        <a href="login.html" class="nav-link nav-right">Mitarbeiterbereich</a>
+        <a href="login.html" class="nav-link">Mitarbeiterbereich</a>
     </nav>
 </header>
 
 <section class="banner">
-    <img src="Amtlicheankündigung.png" alt="Amtliche Ankündigungen Banner">
+    <img src="Amtlicheankündigung.png" alt="Amtliche Ankündigungen">
 </section>
 
 <main class="content">
-    <h2>Amtliche Ankündigungen</h2>
-    <p class="intro-text">
-        Auf dieser Seite veröffentlicht das Landesgericht amtliche Ankündigungen nach Kategorien Rot, Gelb und Grün.
-    </p>
+    <section>
+        <h2>Amtliche Ankündigungen</h2>
+        <p class="intro-text">
+            Hier veröffentlicht das Landesgericht offizielle Ankündigungen in den Kategorien Rot, Gelb und Grün.
+        </p>
 
-    <div class="filter-bar">
-        <button class="btn filter-btn" data-filter="alle">Alle</button>
-        <button class="btn filter-btn" data-filter="Rot">Rot</button>
-        <button class="btn filter-btn" data-filter="Gelb">Gelb</button>
-        <button class="btn filter-btn" data-filter="Grün">Grün</button>
-    </div>
+        <div class="filter-bar">
+            <button class="btn filter-btn" data-filter="alle">Alle</button>
+            <button class="btn filter-btn" data-filter="Rot">Rot</button>
+            <button class="btn filter-btn" data-filter="Gelb">Gelb</button>
+            <button class="btn filter-btn" data-filter="Grün">Grün</button>
+        </div>
 
-    <div id="ankuendigungenListe" class="card-grid">
-        <!-- Dynamisch per JS -->
-    </div>
+        <div id="ankuendigungenListe" class="card-grid">
+            <!-- Wird per JS gefüllt -->
+        </div>
+    </section>
 </main>
 
 <footer class="footer">
