@@ -18,16 +18,14 @@
     <nav class="main-nav">
         <a href="index.html" class="nav-link">Amtliche Ankündigungen</a>
         <a href="gesetzesänderungen.html" class="nav-link">Gesetzesänderungen</a>
-        <a href="dashboard.html" class="nav-link active nav-right">Dashboard</a>
-        <button id="logoutBtn" class="btn small-btn">Abmelden</button>
+        <a href="dashboard.html" class="nav-link active">Dashboard</a>
+        <button id="logoutBtn" class="btn" style="margin-left: 10px;">Abmelden</button>
     </nav>
 </header>
 
 <main class="content">
-    <h2>Mitarbeiter-Dashboard</h2>
-
     <section class="card form-card">
-        <h3>Neue amtliche Ankündigung erstellen</h3>
+        <h2>Neue amtliche Ankündigung</h2>
         <form id="ankuendigungForm">
             <div class="form-group">
                 <label for="ankTitel">Titel</label>
@@ -52,7 +50,7 @@
     </section>
 
     <section class="card form-card">
-        <h3>Gesetzesänderung eintragen</h3>
+        <h2>Gesetzesänderung eintragen</h2>
 
         <div class="form-group">
             <label>Art der Gesetzesänderung</label>
@@ -62,7 +60,6 @@
             </div>
         </div>
 
-        <!-- Neues Gesetzbuch -->
         <form id="gesetzNeuForm" class="gesetz-form">
             <div class="form-group">
                 <label for="neuName">Wie heißt das Gesetzbuch?</label>
@@ -84,7 +81,6 @@
             <p id="neuSuccess" class="success-text"></p>
         </form>
 
-        <!-- Vorhandenes Gesetzbuch -->
         <form id="gesetzVorhForm" class="gesetz-form hidden">
             <div class="form-group">
                 <label for="vorhBuch">Welches Gesetzbuch ist betroffen?</label>
