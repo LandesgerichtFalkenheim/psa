@@ -18,27 +18,29 @@
     <nav class="main-nav">
         <a href="index.html" class="nav-link">Amtliche Ankündigungen</a>
         <a href="gesetzesänderungen.html" class="nav-link">Gesetzesänderungen</a>
-        <a href="login.html" class="nav-link active nav-right">Mitarbeiterbereich</a>
+        <a href="login.html" class="nav-link active">Mitarbeiterbereich</a>
     </nav>
 </header>
 
-<main class="content narrow">
-    <h2>Mitarbeiter-Login</h2>
-    <form id="loginForm" class="card form-card">
-        <div class="form-group">
-            <label for="username">Benutzername</label>
-            <input id="username" type="text" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Passwort</label>
-            <input id="password" type="password" required>
-        </div>
-        <button type="submit" class="btn primary-btn">Anmelden</button>
-        <p id="loginError" class="error-text"></p>
-        <p class="hint-text">
-            (Demo-Zugang: Benutzername: <strong>mitarbeiter</strong>, Passwort: <strong>gericht2025</strong>)
-        </p>
-    </form>
+<main class="content" style="max-width: 480px;">
+    <section class="card form-card">
+        <h2>Mitarbeiter-Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Benutzername</label>
+                <input id="username" type="text" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Passwort</label>
+                <input id="password" type="password" required>
+            </div>
+            <button type="submit" class="btn primary-btn">Anmelden</button>
+            <p id="loginError" class="error-text"></p>
+            <p class="hint-text">
+                Demo: Benutzername <strong>mitarbeiter</strong>, Passwort <strong>gericht2025</strong>
+            </p>
+        </form>
+    </section>
 </main>
 
 <footer class="footer">
